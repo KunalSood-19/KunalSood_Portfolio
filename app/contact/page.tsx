@@ -28,7 +28,7 @@ export default function ContactPage() {
     const message = formData.get("message") as string
 
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-    const mailtoLink = `mailto:kunaalsood15@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
+    const mailtoLink = `mailto:techbykunal88@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
 
     // Open email client
     window.open(mailtoLink, "_blank")
