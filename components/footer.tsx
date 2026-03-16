@@ -18,7 +18,7 @@ export function Footer() {
       label: "LinkedIn",
     },
    
-    { href: "mailto:kunaalsood15@gmail.com", icon: Mail, label: "Email" },
+    { href: "/contact", icon: Mail, label: "Email" },
   ]
 
   return (

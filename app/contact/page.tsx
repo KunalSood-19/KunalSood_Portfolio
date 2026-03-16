@@ -1,5 +1,5 @@
 "use client"
-
+import emailjs from "@emailjs/browser"
 import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
@@ -15,31 +15,39 @@ import { AnimatedBackground } from "@/components/animated-background"
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
 
-    const form = e.currentTarget
-    const formData = new FormData(form)
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setIsSubmitting(true)
 
-    const name = formData.get("name") as string
-    const email = formData.get("email") as string
-    const subject = (formData.get("subject") as string) || "Contact Form Submission"
-    const message = formData.get("message") as string
+  const form = e.currentTarget
+  const formData = new FormData(form)
 
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-    const mailtoLink = `mailto:techbykunal88@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
-
-    // Open email client
-    window.open(mailtoLink, "_blank")
-
-    // Reset form
-    setTimeout(() => {
-      form.reset()
-      setIsSubmitting(false)
-    }, 500)
+  const templateParams = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
   }
 
+  try {
+    await emailjs.send(
+      "kunaalsood15@gmail.com",   // your EmailJS service ID
+      "template_bdjbg7d",  // your template ID
+      templateParams,
+      "WiuSTzt2sMYjoqrvE" // your public key
+    )
+
+    alert("Message sent successfully!")
+
+    form.reset()
+  } catch (error) {
+    console.error(error)
+    alert("Failed to send message.")
+  }
+
+  setIsSubmitting(false)
+}
   return (
     <>
       <AnimatedBackground />
@@ -71,7 +79,7 @@ export default function ContactPage() {
                       <div className="space-y-1">
                         <p className="text-sm font-medium text-muted-foreground">Email</p>
                         <a href="mailto:techbykunal88@gmail.com" className="text-sm hover:text-accent transition-colors">
-                          techbykunal88@gmail.com
+                          kunaalsood15@gmail.com
                         </a>
                       </div>
                     </div>
