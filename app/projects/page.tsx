@@ -11,15 +11,25 @@ import { AnimatedBackground } from "@/components/animated-background"
 
 export default function ProjectsPage() {
   const projects = [
-    // {
-    //   title: "Sorting Visualizer",
-    //   category: "DSA Project",
-    //   description:
-    //     "Interactive visualization of popular sorting algorithms including Quick Sort, Merge Sort, and Bubble Sort built with Java Swing.",
-    //   tags: ["Java", "Algorithms", "GUI"],
-    //   github: "https://github.com",
-    //   demo: "#",
-    // },
+    {
+  title: "AI-Powered E-Commerce Analytics Dashboard",
+  category: "Full Stack SaaS Project",
+  description:
+    "Developed a modern analytics platform that enables users to securely upload CSV datasets, generate real-time sales and profit analytics, visualize insights using interactive charts, and manage their own data through JWT authentication. Designed with a professional dashboard UI and scalable backend architecture.",
+  tags: [
+    "Node.js",
+    "Express",
+    "MySQL",
+    "JWT",
+    "Chart.js",
+    "Multer",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  github: "https://github.com/KunalSood-19/InsightCart",
+  demo: "#",
+},
     {
       title: "Graphic Designing",
       category: "Design",
@@ -44,22 +54,58 @@ export default function ProjectsPage() {
       github: "https://github.com/KunalSood-19/v0-premium-tailor-website",
       demo: "",
     },
-    // {
-    //   title: "Brand Identity Design",
-    //   category: "Graphic Design",
-    //   description:
-    //     "Complete brand identity package for a local startup including logo, color palette, typography, and brand guidelines.",
-    //   tags: ["Logo Design", "Branding", "Typography"],
-    //   demo: "#",
-    // },
-    // {
-    //   title: "College Vlog Series",
-    //   category: "Video Editing",
-    //   description:
-    //     "Documentary-style vlogs capturing student life, featuring dynamic cuts, color grading, and engaging storytelling.",
-    //   tags: ["Videography", "Color Grading", "Storytelling"],
-    //   demo: "#",
-    // },
+    {
+  title: "MeetHub+",
+  category: "Full Stack Web Application",
+  description:
+    "A feature-rich video conferencing platform with real-time video & audio calling, AI-powered meeting summaries, collaborative whiteboard, screen sharing, host controls, live chat, file sharing, polls, attendance tracking, and a fully responsive user experience.",
+  tags: [
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "Socket.IO",
+    "WebRTC",
+    "AI"
+  ],
+  github: "https://github.com/yourusername/meethub-plus",
+  demo: "#",
+},
+   {
+  title: "GrabMyShow",
+  category: "Full Stack Movie Ticket Booking Platform",
+  description:
+    "A full-stack movie ticket booking platform featuring movie browsing, theatre and show management, real-time seat selection with Socket.IO, secure authentication, online payments, AI-powered cinema food ordering, restaurant table booking, responsive UI, and automated backend unit testing using Jest and Supertest.",
+  tags: [
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Socket.IO",
+    "Jest",
+    "Supertest"
+  ],
+  github: "https://github.com/KunalSood-19/UrbanHub",
+  demo: "#",
+},
+{
+  title: "CodeLens AI",
+  category: "AI Code Review & Analysis Tool",
+  description:
+    "A modern AI-powered code review platform that enables developers to write, upload, and analyze source code. It provides code quality scoring, complexity analysis, language detection, loop and line count metrics, intelligent improvement suggestions, interactive visualizations with Chart.js, downloadable reports, and a responsive developer-friendly interface.",
+  tags: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "CodeMirror",
+    "Chart.js",
+    "jsPDF"
+  ],
+  github: "https://github.com/KunalSood-19/CodeLens",
+  demo: "#",
+},
   ]
 
   return (
