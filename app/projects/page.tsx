@@ -12,6 +12,28 @@ import { AnimatedBackground } from "@/components/animated-background"
 export default function ProjectsPage() {
   const projects = [
     {
+  title: "Vertex – AI Career & Recruitment Platform",
+  category: "Full Stack AI SaaS Platform",
+  description:
+  "An AI-powered career platform where users can build ATS-friendly resumes, get AI resume analysis, practice interviews, discover jobs, and receive personalized career guidance. Recruiters can post jobs, screen candidates, and manage hiring efficiently.",
+  tags: [
+    "React",
+    "Tailwind CSS",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Socket.IO",
+    "Gemini AI",
+    "Python",
+    "spaCy",
+    "Scikit-learn"
+  ],
+  github: "https://github.com/KunalSood-19/Job-Connect-AI",
+  demo: "https://job-connect-ai-jobconnect-ai-omega.vercel.app/",
+},
+    {
   title: "AI-Powered E-Commerce Analytics Dashboard",
   category: "Full Stack SaaS Project",
   description:
