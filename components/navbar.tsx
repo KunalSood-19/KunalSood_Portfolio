@@ -26,7 +26,7 @@ export function Navbar() {
         <div className="flex h-16 items-center">
           {/* Logo (Left) */}
           <Link href="/" className="text-xl font-bold tracking-tight hover:text-accent">
-            Kunal<span className="text-accent">.</span>
+            Kunal.<span className="text-accent">.</span>
           </Link>
 
           {/* Right Side (Desktop + Mobile Controls) */}
