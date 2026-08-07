@@ -163,7 +163,7 @@ export default function HomePage() {
 
               <motion.div variants={itemVariants} className="space-y-4">
                 <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-semibold tracking-tight text-balance text-[#0D1B15] dark:text-[#EDEEF2]">
-                  Hello, I'm <span className="text-[#35584F] dark:text-[#6C8EEF]">Kunal</span>
+                  Hello, I'm <span className="text-[#35584F] dark:text-[#6C8EEF]">Kunal.</span>
                 </h1>
                 <p className="text-base md:text-lg text-[#2C4A3E] dark:text-[#9296A0] leading-relaxed text-pretty max-w-xl mx-auto">
                   A B.Tech CSE student who turns algorithms into structure and ideas into visual
