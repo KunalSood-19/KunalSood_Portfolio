@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser"
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, Send, Clock } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { PageBackground } from "@/components/page-background" // <-- Imported PageBackground
+import { PageBackground } from "@/components/page-background"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -70,7 +70,7 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold text-[#0D1B15] dark:text-[#EDEEF2]">Let's Connect</h1>
-              <p className="text-xl text-[#2C4A3E] dark:text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl text-[#2C4A3E] dark:text-[#9296A0] max-w-2xl mx-auto leading-relaxed">
                 Have a project in mind or just want to chat? I'd love to hear from you.
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                         <Mail className="h-5 w-5 text-[#35584F] dark:text-[#6C8EEF]" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-[#2C4A3E] dark:text-muted-foreground">Email</p>
+                        <p className="text-sm font-medium text-[#2C4A3E] dark:text-[#9296A0]">Email</p>
                         <p className="text-sm font-medium text-[#0D1B15] dark:text-white">kunaalsood15@gmail.com</p>
                       </div>
                     </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                         <MapPin className="h-5 w-5 text-[#35584F] dark:text-[#6C8EEF]" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-[#2C4A3E] dark:text-muted-foreground">Location</p>
+                        <p className="text-sm font-medium text-[#2C4A3E] dark:text-[#9296A0]">Location</p>
                         <p className="text-sm font-medium text-[#0D1B15] dark:text-white">India</p>
                       </div>
                     </div>
@@ -111,12 +111,17 @@ export default function ContactPage() {
                 </Card>
 
                 {/* Quick Response Card */}
-                <Card className="bg-white/70 border border-[#88BDA4] shadow-sm dark:shadow-none dark:bg-gradient-to-br dark:from-[#6C8EEF]/10 dark:via-[#6C8EEF]/5 dark:to-transparent dark:border-[#6C8EEF]/20 backdrop-blur-sm">
+                <Card className="bg-white/70 border border-[#88BDA4] shadow-sm dark:shadow-none dark:bg-[#101218]/80 dark:border-white/[0.07] backdrop-blur-sm transition-all hover:border-[#35584F] dark:hover:border-[#6C8EEF]/40 hover:-translate-y-0.5">
                   <CardContent className="p-6">
-                    <h3 className="font-semibold text-[#0D1B15] dark:text-white">Quick Response</h3>
-                    <p className="text-sm text-[#2C4A3E] dark:text-muted-foreground mt-1">
-                      I typically respond within 24 hours.
-                    </p>
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-[#88BDA4]/30 dark:bg-[#6C8EEF]/10">
+                        <Clock className="h-5 w-5 text-[#35584F] dark:text-[#6C8EEF]" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-[#0D1B15] dark:text-white">Quick Response</p>
+                        <p className="text-sm font-medium text-[#2C4A3E] dark:text-[#9296A0]">I typically respond within 24 hours.</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -133,7 +138,7 @@ export default function ContactPage() {
                           name="name" 
                           placeholder="Your name" 
                           required 
-                          className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-transparent dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-muted-foreground dark:focus-visible:ring-[#6C8EEF]"
+                          className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-[#1A1D24] dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-[#9296A0] dark:focus-visible:ring-[#6C8EEF]"
                         />
                       </div>
 
@@ -144,7 +149,7 @@ export default function ContactPage() {
                           type="email" 
                           placeholder="your@email.com" 
                           required 
-                          className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-transparent dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-muted-foreground dark:focus-visible:ring-[#6C8EEF]"
+                          className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-[#1A1D24] dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-[#9296A0] dark:focus-visible:ring-[#6C8EEF]"
                         />
                       </div>
                     </div>
@@ -155,7 +160,7 @@ export default function ContactPage() {
                         name="subject" 
                         placeholder="What's this about?" 
                         required 
-                        className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-transparent dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-muted-foreground dark:focus-visible:ring-[#6C8EEF]"
+                        className="border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-[#1A1D24] dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-[#9296A0] dark:focus-visible:ring-[#6C8EEF]"
                       />
                     </div>
 
@@ -166,7 +171,7 @@ export default function ContactPage() {
                         rows={6}
                         placeholder="Tell me more about your project..."
                         required
-                        className="resize-none border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-transparent dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-muted-foreground dark:focus-visible:ring-[#6C8EEF]"
+                        className="resize-none border-[#88BDA4] bg-white/50 text-[#0D1B15] placeholder:text-[#456358] focus-visible:ring-[#35584F] dark:bg-[#1A1D24] dark:border-white/10 dark:text-[#EDEEF2] dark:placeholder:text-[#9296A0] dark:focus-visible:ring-[#6C8EEF]"
                       />
                     </div>
 
